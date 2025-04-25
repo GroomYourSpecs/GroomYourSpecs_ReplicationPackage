@@ -11,7 +11,7 @@ This replication package is structured as follows:
 .
 |--- literature_review: Data collected from the literature review and a document detailing the search process used.
 |--- interview: Transcripts extracted from the interview and a document detailing the interview process.
-|--- Controlled Experiment: 
-    |--- Questionnaire: Contains 3 csv files with questionnaire responses for bottom-up, top-down and both combined.
-    |--- Artefacts: Contains the zip file with the produced artefacts and 3 csv files describing the results for the top-down and bottom-up.
+|--- controlled_experiment: 
+    |--- questionnaire: Contains 3 csv files with questionnaire responses for bottom-up, top-down and both combined.
+    |--- artefacts: Contains the zip file with the produced artefacts and 3 csv files describing the results for the top-down and bottom-up.
 ```
