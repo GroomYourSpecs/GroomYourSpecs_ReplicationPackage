@@ -1,0 +1,17 @@
+IDs,Mission,Adequate,Complete,Verifiable,Comprehensible,Total
+G101,food_logistics,5,0,0,5,"12,5"
+G102,food_logistics,10,5,0,10,"31,25"
+G103,food_logistics,5,0,0,10,"18,75"
+G104,food_logistics,0,0,0,0,0
+G201,deliver_goods,10,0,0,10,25
+G202,deliver_goods,5,0,0,10,"18,75"
+G203,deliver_goods,5,0,0,10,"18,75"
+G204,deliver_goods,0,0,0,0,0
+G301,food_logistics,5,0,0,5,"12,5"
+G302,food_logistics,5,0,0,5,"12,5"
+G303,food_logistics,10,5,0,10,"31,25"
+G304,food_logistics,10,0,0,10,25
+G401,deliver_goods,10,5,0,10,"31,25"
+G402,deliver_goods,10,5,0,5,25
+G403,deliver_goods,10,5,0,10,"31,25"
+G404,deliver_goods,5,5,0,5,"18,75"
