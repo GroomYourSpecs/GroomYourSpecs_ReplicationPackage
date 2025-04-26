@@ -4,6 +4,7 @@
 ## Overview
 ```
 .
+|---instructions_controlled_experiment.zip: Instrcutions, tutorials and information given to students during the experiment.
 |---artefacts
    |---artefacts.zip: Artefacts produced during the controlled experiment
    |---artefacts_analysis.ipynb: Jupyter notebook with the data analysis
