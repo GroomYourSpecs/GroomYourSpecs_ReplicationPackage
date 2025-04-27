@@ -1,5 +1,14 @@
 # Controlled Experiment
 
+## Installation
+
+Using python3 and pip:
+
+```sh
+pip3 install notebook
+pip3 install stats matplotlib scipy numpy==1.24 pandas seaborn plot_likert
+jupyter notebook
+```
 
 ## Overview
 ```
