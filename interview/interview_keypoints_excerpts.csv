@@ -1,0 +1,293 @@
+Key point: Importance of a top-down approach in complex robotic mission,,,,,,,,,,,,,,,,,,,
+Source,Topics,Excerpts,,,,,,,,,,,,,,,,,
+Interview 5,Limitation of the Bottom-Up Approach in Complex Scenarios,"Yes, I personally like this approach... in this case, different robots performing different tasks or trying to interact with each other or with other things in the environment — it's much harder to have a method to handle this kind of situation... doing it manually is very complicated.",,,,,,,,,,,,,,,,,
+Interview 5,"The tool is partially effective for some specification challenges, especially in generic scenarios that require a standardized methodology.","Partially, yes, as I mentioned. Some parts yes, others not so much, and trying to explain a bit more: unfortunately, even now in 2025, we haven't reached a point where we have super advanced robots doing everything and handling complex activities. We're still stuck in these gaps where we need to specify very clearly the context the robot will be operating in for things to be feasible. So, pulling a little from what I mentioned about specific solutions — they end up being much more necessary. What I mean is that, rather than having one generic solution, generality tends to come from the usage itself. You end up using it in so many diverse contexts that you begin to need more generic methods, instead of having to rely on highly specific ones. Unfortunately, we haven't reached that point yet. So, because of that, I think that methods like MutRoSe will indeed address these more generic problems. As I said, it's about making the method more accessible; however, I don't see it — it's not that I don't see it — but if you compare it with more specific methods for more specific applications, I don't think MutRoSe would be capable of handling everything. I know it's not very clearly explained, but the point is: in some specific situations, it might still be easier to do a bit manually or to use something much simpler rather than needing to work with a much more powerful tool that requires more effort, more setup, and so on. But that's my point — at least that's how I see it so far.",,,,,,,,,,,,,,,,,
+Interview 2,Liked the approach of starting with a large mission and breaking it down into smaller missions.,"Does it make sense? Yes, I think it does. I like this approach of starting with a large, potentially complex mission, and gradually breaking it down into smaller sub-missions, then into activities, and representing everything involved in that structure — eventually incorporating other abstractions as well, not just goals and activities.",,,,,,,,,,,,,,,,,
+Interview 2,"Allows mission decomposition in a clear and structured way, as long as users master the syntax and semantics.","As long as they, of course, learn the syntax and semantics of things. So, I see the positive side of it. The downside is that, generally, it is very difficult to use when the situation is complex.",,,,,,,,,,,,,,,,,
+Interview 8,Addresses initial challenges in robotic mission specification.,"I think I think it effectively addresses the challenges at a very kind of beginning level.
+I think if you add in like I said, more complex communications. If you have some some sensing degradation or probabilistic behaviours, then it doesn't quite do that yet.
+But it could.
+And and it certainly not, you know, not ruling it out as such the way that it is.
+I don't think you've caused any issues there.
+You might want to consider so a lot of the properties you talking about were like functional.
+Properties. I don't know if you have performance properties or safety properties. I would imagine in a hospital situation there would be quite a lot of safety properties that you would also be interested.
+So perhaps when the when the model is generated, or the decompositions are generated, there might be extra conditions like overall OCL constraints rather than for specific nodes that you might need to be able to check.
+Like for example, the robots kind of crash into each other.
+They can't hurt the nurse. You know, things like that.
+I don't know if you are generating things that would allow that or not, but if if.
+I think as it gets more complex, you might find yourself needing needing to check the decompositions against kind of high level properties at some point.",,,,,,,,,,,,,,,,,
+Interview 8,Evolution from vague to detailed.,"Yeah, I would call that top down as well.
+I think I think you're starting with this very vague natural language specification. Then you gradually add more detail and decompose it.
+So I I would say that's top down.
+I I can see.
+I mean, I know that in the community in general, sometimes people have a different way of thinking of top down versus bottom up, so.
+I guess what you get in the end, you can argue that you know.
+Some correspondence back up the chain would be looking at bottom up so I can see why someone might.
+Say it's not top down, but I think it is.",,,,,,,,,,,,,,,,,
+Interview 5,Preference for the Top-Down Approach in Complex Scenarios.,"Yes, personally, I like this approach. It’s much easier to think at a high level than from the bottom up. It depends, though. It depends on how complex the task is. For example, if the task is very simple, bottom-up works just fine — you can start by building the robot for that specific task, assembling the parts, and when you need a controller or something like that, it will handle a very specific or not very complex task. You know? So a small state machine will solve that.
+Complexity isn’t much of a problem in this case, so it's straightforward to build a new robot. However, when we start having much more complex applications, like resource allocation and different robots performing different tasks or trying to interact with each other or with other things in the environment, it becomes much harder to have a method for doing this kind of thing. For instance, if I need to perform a specific task with 5 robots — robots that will open a door, grab something here and there, and do the same task — I can do it manually. But if I need a method for doing this for different tasks, doing it by hand becomes very complicated. It’s very time-consuming, and there’s a lot of decomposition involved.
+So, I wouldn’t particularly say that I like being forced into a top-down approach, because it provides a method for this. It gives me flexibility, you know? Even if I end up doing it manually, at least I have a method for how to do this for different cases without having to reinvent the wheel. It’s like doing addition — I don’t need to gather pebbles and add them one by one. I have a method to do the calculation, and I can apply it for different parameters to solve my problem. It’s much simpler and more direct. That would be my answer.
+
+",,,,,,,,,,,,,,,,,
+Interview 4,"Captures high-level needs (e.g., organizational objectives) that developers or roboticists might not prioritize.","I understand, I understand. Thank you, thank you for the explanation. As for my opinion on the top-down approach, I find it very interesting. Actually, it’s because it brings the user closer — not a regular user, but a manager, for instance, in a hospital, bringing a better understanding of the mission design. It also brings in more of a business perspective, or other types of views that the developer or someone closer to the robot might not have. So I think that’s an advantage. A disadvantage, though, is that it may lose some details — in terms of the robot's capabilities, for example, or the order in which tasks must be executed. From an optimization perspective, this approach could also be applied at a managerial level. If you take people from production engineering, they’re doing exactly this — they work with operational research and process optimization. So, perhaps some of this information gets lost in the top-down view, at least in the one you showed. But overall, I really like it. It brings the mission development closer to people who wouldn’t typically be part of the conversation. They would normally need an intermediary, like the developer. So, I do find it really interesting, yes.",,,,,,,,,,,,,,,,,
+Interview 9,Comparison with certification practices and requirement decomposition.,"And also, I’m not sure how familiar you are with certification procedures and all that, but it’s a very standard mechanism: you start with high-level requirements, then move on to low-level requirements, and finally to implementation. So, I think it fits very well with what people are used to doing.",,,,,,,,,,,,,,,,,
+Interviewee 7 Questionary Response,,"In particular, the ability to specify from higher-level goal tasks, through intermediate (compound) tasks (which can themselves be composed of simpler tasks), down to primitive actions is truly powerful and flexible, yet also well-suited for both practitioners—such as experienced developers and modelers (who are interested in all levels down to the leaves, in order to reach a higher level of detail)—and for modelers or other users with limited or no robotics experience (who can start from the higher levels, understand the mission in its entirety in an incremental way, and then gradually refine it down to the lowest-level primitive actions that will actually be executed by the robots).",,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+The need for an iterative mixed approach,,,,,,,,,,,,,,,,,,,
+Source,Topics,Excerpts,,,,,,,,,,,,,,,,,
+Interview 3,Need for Complementarity with Bottom-Up.,"I believe we need an iterative mixed approach, where we start in a top-down fashion, but might need to revisit the specification once we get to the details.  I think this is true in most approaches: as we learn more, we refine our vision. ",,,,,,,,,,,,,,,,,
+Interview 4,"Recognizes that it doesn’t solve all challenges in robotic specification, especially those of a technical nature.","I see, I see. Thank you, thank you for the explanation.
+My opinion about the top-down approach, I find it very interesting.
+In fact, it's because it brings the user closer, not just a regular user, but someone like a hospital manager, to understanding and designing the mission itself, right?
+It also brings in a more business-oriented perspective or other types of perspectives that the developer or the person closer to the robot might not necessarily have, right? So, I think that's an advantage.
+A disadvantage is that it might miss out on some details, right? In terms of the robot’s capabilities, and in the order in which tasks have to be executed.
+And from an optimization perspective, the missions could also be optimized at a managerial level, right? If you take the production engineering people, they do exactly this — they work with this, with operations research and process optimization.
+And yes, you might lose a bit of that information in the top-down view, at least in the one you showed.
+But overall, I really like it. It brings mission development closer to people who wouldn’t have been able to be part of this conversation before, right? They would need an intermediary, the developer, for example. So, I think it’s definitely very interesting.",,,,,,,,,,,,,,,,,
+Interview 7,Supports coevolution between model and code.,"I want to keep it exclusively as a top-down approach.
+Or maybe you could also envision a hybrid approach, as that often happens. If you think, for instance, about the world of sales, you can explore three different types of approaches.
+The top-down approach, which is model first, then code; and the bottom-up approach, where code comes first, then the model. Then, we have the hybrid approach, which is usually what developers prefer.
+What they often do is start with a top-down description of the problem. From that, they derive some stable framework or specification in terms of low-level code. Then, they begin modifying the code and want to see these changes reflected in the models.
+So, it's an evolution and progression. I don’t know if this could happen tomorrow morning, but it could be a long-term goal to keep in mind while engineering. You know, this kind of approach.""
+ ",,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+The approach facilitates the comprehensibility,,,,,,,,,,,,,,,,,,,
+Source,Topics,Excerpts,,,,,,,,,,,,,,,,,
+Interview 6,The approach is interesting and user-friendly.,"So I think that the goal is very, let's say user friendly.
+And the main point is that maybe.
+The fact that you you consider it the.
+Leaf goal as a query goal and the.
+And the goal plus the task.
+SD.
+How do you call it action goal?
+
+Speaker 1   44:57
+The chief goal? Chief goal.
+
+Entrevistado 6   44:58
+At achieved goal, this is interesting, but maybe may not be intuitive.
+At the 1st the 1st moment. So yeah, if it is clear, it's a very a very interesting way of modeling this information.
+For the H scan part, I think it's good because as I understood it's a way.
+For not having.
+A full model, a heavy model and at the same time for.
+Initializing it, let's say not at runtime, but at least considering context or factors.
+So did I get it good. OK.
+
+Speaker 1   45:42
+Perfect. Perfect. Yes, yes.
+
+Entrevistado 6   45:44
+OK, so I think it's a. It's a very interesting approach, very good approach.
+I don't know how.
+How much effort will it take to to move from the model to the real execution?
+I don't know if it's part of this work. If you're going to consider it later, but just to to understand if you consider it how much effort would it take?
+But.
+Generally I like it.
+Let's say this.",,,,,,,,,,,,,,,,,
+Interview 4,Very interesting approach for democratizing mission planning.,"I see, I see. Thank you, thank you for the explanation.
+My opinion about the top-down approach, I find it very interesting.
+In fact, it's because it brings the user closer, not just a regular user, but someone like a hospital manager, to understanding and designing the mission itself, right?
+It also brings in a more business-oriented perspective or other types of perspectives that the developer or the person closer to the robot might not necessarily have, right? So, I think that's an advantage.
+A disadvantage is that it might miss out on some details, right? In terms of the robot’s capabilities, and in the order in which tasks have to be executed.
+And from an optimization perspective, the missions could also be optimized at a managerial level, right? If you take the production engineering people, they do exactly this — they work with this, with operations research and process optimization.
+And yes, you might lose a bit of that information in the top-down view, at least in the one you showed.
+But overall, I really like it. It brings mission development closer to people who wouldn’t have been able to be part of this conversation before, right? They would need an intermediary, the developer, for example. So, I think it’s definitely very interesting.",,,,,,,,,,,,,,,,,
+Interview 2,"Combines visual language and natural language, making specification more intuitive.","The advantage is that you have a system that’s easier for users from different backgrounds and domains to model what they need. I think that’s the main benefit. Because they can use a visual language, a visual notation. They can use natural language to specify certain things.",,,,,,,,,,,,,,,,,
+Interview 2,Visual notation simplifies understanding and collaboration among non-technical stakeholders.,"How readable this is going to be really depends on the stakeholder, I think.
+At least, personally, I don’t use JSON much in my work, right?
+My area is more like DSL, you know?
+A Domain-Specific Language, so it’s maybe a bit more verbose, but on the other hand, I think it really depends a lot on the stakeholder, right?
+Because if it’s an expert, I don’t think it’s a problem, but if you’re thinking about a less expert user, how are they going to be able to use this for configuration, I think?
+Conceptually, I think it’s good — I think it’s solid. There’s the graphical view, the structural view — I think that part is fine.
+I think the bigger challenge is more about integrating these two inputs, let’s say, for these tasks.
+One of the things I think is somewhat related to the last question about scalability, right?
+So how is it going to work if I really have all these possible combinations? How will I guide the approach to handle this?
+That’s what I’m seeing, at least on the surface, at the moment.",,,,,,,,,,,,,,,,,
+Interview 8,Logical and intuitive process.,"Yeah. So I haven't seen it before.
+Well, I hadn't used before.
+I think I had seen in a paper maybe once before, but yeah, I think it seems sensible.
+The only thing I suppose, and I think this is a problem more generally, I don't think this is purely a uterus problem, is how you jump from that natural language specification into, you know, pulling out those those words that you highlighted. How do you decide they're the ones?
+That you need and then how do you decide that?
+For example, in the model there you had. You had these extra actions.
+It's like open and close the door.
+How do you decide you need to do that based on the natural language?
+Now I presume that you had some discussion with the partner or whoever was developing or designing the system, and that's where you got the information from.
+But I think you know in other requirements tools even just being able to add add that feature in as a sort of you know maybe a comment somewhere to say this is where this came from.
+Could be useful addition maybe.
+But I think in general the process seemed logical. It seemed like using VS code is useful because, well, lots of people are familiar with it. I think the language seemed quite intuitive.
+Inputs were represented the way I thought they would be. The way I thought they would be. I found it very easy to read.",,,,,,,,,,,,,,,,,
+Interview 8,Intuitive language that is easy to read.,,,,,,,,,,,,,,,,,,
+Interview 1,"Focuses on mission specification and decomposition, which was previously done manually or required deep knowledge.","We really still need some ongoing work, and we hope that soon we’ll have a second version to really address this, right?
+Because here we worked with...
+I think we mainly focused on the proof of concept first —
+specifying and decomposing, right?
+Which is something that, until now, had mostly been done manually.",,,,,,,,,,,,,,,,,
+Interview 5,"The graphical representation of Hierarchical Task Networks (HTNs) makes the mission structure more understandable, even for users without deep expertise.","It could be that, many times, it ends up being cheaper — both in terms of time and tool usage — because it’s very hard to have a generic application that’s as good as a more specific one.
+So that ends up being a downside — a downside against MutRoSe.
+Besides that, I mentioned HTN and HDDL — since they are specific tools, a first-time user will have a hard time with them.
+It’s not easy to create an HDDL from scratch if you don’t know what an HDDL is, or at least what an HDDL looks like.
+It’s easier to understand an HTN when you're looking at the JSON file.
+So, that’s still a downside.
+I think one really nice part now is that at least there's visualization, and that helps a lot — at least for the HTN part.
+Because the cool thing about HTN is, if you understand at least the need for HTNs — why they are used, that they decompose tasks and generate a sequence of actions — once you have a bit of that context, the visualization is basically all you need.
+But if you need that context plus the JSON file, it’s very hard for a human to follow along.
+So, the visualization is a good addition.
+Goal model already had that — at least when I first got to know Goal model, it already had visualization, so...
+I won't lie, I still have some trouble understanding Goal model even today, but the visualization already helps a lot — seeing that there are things linked, that there’s a correlation between decompositions, that this is an entity, that’s an operation, and so on.
+So basically, I think the biggest downside I would mention about MutRoSe is that, besides having these specific tool-related issues, adding them just increases complexity.
+So, for a first-time user trying to use MutRoSe, yes, there will definitely be difficulties, because there’s a lot of very specific stuff, and it will leave users feeling uncomfortable.",,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+Specifying priorities and non-functional properties,,,,,,,,,,,,,,,,,,,
+Source,Topics,Excerpts,,,,,,,,,,,,,,,,,
+Interview 2,"Doesn’t allow assigning weights, priorities, or costs to actions (e.g., choosing between routes based on proximity).","He doesn’t have a graphical representation; it’s only a textual representation in JSON.
+And he’s focused on categorizing elements with cost and benefit, right?
+It’s cost, benefit, and something else — three things.
+So, for example, your system doesn’t really deal with that kind of thing, right?
+Eventually, for a given mission, you could assign weights to different choices, right?
+Like saying, 'Okay, this option is possible, but it’s more costly than that one.'
+So, how do you represent that?
+From what I’ve seen, today you don’t represent it — at least not here.
+So, would you say that’s a limitation of the tool?",,,,,,,,,,,,,,,,,
+Interview 8,Doesn’t handle complex communications or probabilistic behaviors well.,"""I think it effectively addresses the challenges at a very kind of beginning level. I think if you add in like I said, more complex communications. If you have some some sensing degradation or probabilistic behaviours, then it doesn't quite do that yet.
+But it could [...] So perhaps when the when the model is generated, or the decompositions are generated, there might be extra conditions like overall OCL constraints rather than for specific nodes that you might need to be able to check. Like for example, the robots kind of crash into each other.
+They can't hurt the nurse.""",,,,,,,,,,,,,,,,,
+Interview 4,Lack of operational details.,"Uh-huh.
+Yeah?
+Yeah, I think so.
+In the sense that you have more information about how the tasks are actually executed.
+It’s about how the tasks are carried out at a lower level, right? So...
+It’s like this:
+My concern — maybe due to a lack of knowledge about the approach itself — is the lack of information about how the tasks are actually executed at a lower level.
+In these models, it’s more at a higher level.
+It’s that they could, for example, be used for optimizing processes.
+I might be wrong, though.",,,,,,,,,,,,,,,,,
+Interview 5,"Doesn’t solve all problems, especially in highly specific applications.","Addressing these more generic problems.
+This — as I said — is about the method, about making it more actionable. However, it’s not that... it’s not that I don’t see it, but when you compare it to slightly more specific methods for more specific applications, I don’t see multi-robot systems being able to...
+How do I put it... to do everything.
+It wasn’t very clearly explained, but it’s really just a matter of specifying things.
+Maybe in a specific situation, it would be easier to just do something manually or build a much simpler solution, instead of having to use a much more powerful tool that would require more work and effort.
+But for me, that’s my point — at least that’s how I see it for now.",,,,,,,,,,,,,,,,,
+Interview 8,Still doesn’t address performance and security properties.,"I think I think it effectively addresses the challenges at a very kind of beginning level.
+I think if you add in like I said, more complex communications. If you have some some sensing degradation or probabilistic behaviours, then it doesn't quite do that yet.
+But it could.
+And and it certainly not, you know, not ruling it out as such the way that it is.
+I don't think you've caused any issues there.
+You might want to consider so a lot of the properties you talking about were like functional.
+Properties. I don't know if you have performance properties or safety properties. I would imagine in a hospital situation there would be quite a lot of safety properties that you would also be interested.
+So perhaps when the when the model is generated, or the decompositions are generated, there might be extra conditions like overall OCL constraints rather than for specific nodes that you might need to be able to check.
+Like for example, the robots kind of crash into each other.
+They can't hurt the nurse. You know, things like that.
+I don't know if you are generating things that would allow that or not, but if if.
+I think as it gets more complex, you might find yourself needing needing to check the decompositions against kind of high level properties at some point.",,,,,,,,,,,,,,,,,
+Interview 8,Doesn’t handle complex communications or probabilistic behaviors (yet).,,,,,,,,,,,,,,,,,,
+Interview 8,"In contexts like hospitals, safety properties are crucial.",,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+Cohesive but complex modeling framework,,,,,,,,,,,,,,,,,,,
+Source,Topics,Excerpts,,,,,,,,,,,,,,,,,
+Interview 2,"Allows mission decomposition in a clear and structured way, as long as users master the syntax and semantics.","What’s the advantage of this approach?
+The advantage is that you have a system that’s easier for users from different backgrounds and domains to model what they need.
+I think that’s the main strength.
+Because they can use a visual language, a visual notation.
+They can use natural language to specify certain things.
+It’s easy to decompose, right?
+As long as they, of course, learn the syntax and semantics of the system.",,,,,,,,,,,,,,,,,
+Interview 1,Requires prior knowledge of tools like HDDL and alignment with MutRoSe.,"So, at least personally, I don’t use JSON much in my work, you know?
+My area is more like DSL, right?
+Domain-Specific Language, so it’s maybe a bit more verbose, but on the other hand, I think it really depends a lot on the stakeholder, you know?
+Because if it’s an expert, I don't think it’s a problem. But if you're thinking about a less experienced user, how are they going to be able to use that for configuration?
+Conceptually, I think it’s good — I think it looks solid. There’s the graphical view, the structural view — I think that's fine.
+I think the bigger challenge is more about integrating these two types of inputs, let's say, into these systems.
+And part of it, I think, relates to the previous question about scalability, right?
+So, how is it going to work if I really have all those possible combinations? How will the approach guide me to handle that?
+That’s kind of what I’m seeing, you know, on the surface, at this moment.",,,,,,,,,,,,,,,,,
+Interview 5,"The integration of multiple technologies (HDDL, HTN, Json) creates a steep learning curve for beginners.",Combining specific tools increases complexity... a first-time traveler will struggle,,,,,,,,,,,,,,,,,
+Interview 5,"Languages like HDDL and Json require prior knowledge, making the entry for new users uncomfortable.","MutRoSe unifies different specification tools to model a robotic mission in a cohesive framework. Before MutRoSe, the developer(s) needed to handle and track the various tools, ensuring the mission was correctly defined.",,,,,,,,,,,,,,,,,
+Interview 6,Need to learn two languages (goal modeling and iHTNs).,"OK.
+So maybe of course you you need to know 2 languages because if you want to use it, you need to know both goal modeling that it's easy.
+Yeah, actually it's quite intuitive model, but you need to know it and htms or at least some.
+Yeah, maybe a problem is that.
+As as I know so far, Htms doesn't have a a modeling interface.
+Just a textual 1.
+So on the one side, you need to know how to model a goal oriented model and how to compute it with additional information. And then you also have to understand how to model your plan, let's say.
+That's maybe the the most.
+Most important drawback, let's call it like that.",,,,,,,,,,,,,,,,,
+Interview 8,Difficulty in transitioning from natural language to the model.,"""Yeah, so I hadn't seen it before.
+Well, I hadn’t used it before.
+I think I may have seen it in a paper once, but yeah, I think it seems sensible.
+The only thing I suppose — and I think this is more of a general problem, not just an issue with the tool — is how you transition from the natural language specification to identifying those specific words that you highlighted. How do you decide which ones are the necessary ones?
+And then, how do you decide that, for example, in the model you had, with the extra actions like 'open' and 'close the door'? How do you decide that you need to include those based on the natural language specification?
+Now, I assume you had some discussion with the partner or whoever was developing or designing the system, and that’s where you got the information from. But, I think in other requirements tools, even just adding that feature as a kind of comment somewhere — to say, 'this is where this came from' — could be a useful addition, maybe.
+But overall, the process seemed logical. Using VS Code is practical because, well, lots of people are familiar with it. I also thought the language seemed quite intuitive. The inputs were represented the way I expected, and I found it very easy to read.",,,,,,,,,,,,,,,,,
+Interview 6,The learning curve may be the biggest downside.,"So I think the goal is very, let's say, user-friendly.
+The main point is that maybe the way you consider the leaf goal as a query goal, and the goal plus the task — how do you call it, action goal? Achieved goal? — is interesting, but it might not be intuitive at first.
+So, yeah, if it’s clear, it’s a very interesting way of modeling this information.
+For the HDDL part, I think it's good because, as I understand it, it’s a way to avoid having a full, heavy model while still being able to initialize it — not at runtime, but at least by considering context or factors.
+Did I get that right? OK.",,,,,,,,,,,,,,,,,
+Interview 6,"The idea of classifying goals as ""achieved goal"" and ""query goal"" is interesting, but may not be intuitive at first.",,,,,,,,,,,,,,,,,,
+Interview 5,"MutRoSe can be overly complex for simple problems, where more direct approaches would be more practical.","Partly, yes, as I mentioned.
+Some parts yes, others no, and I’ll try to explain a bit more. Unfortunately, here in 2025, we haven’t reached the point of having super advanced robots doing everything and complex activities. We’re still not there.
+I fall into these gaps where we need to specify very clearly the context in which the robot will operate to make it feasible.
+So, pulling a bit from what I’ve said about specific solutions, they will end up being much more effective.
+It’s not that I’m saying that a more generic solution is the answer, but generality comes from usage. You’re using it in so many different contexts that you start needing more generic methods, rather than specific ones. Unfortunately, we haven’t reached that point yet.
+And because of that, I believe that, yes, the models will address these more generic problems.
+As I mentioned before, the method of making things more adaptable is key, but I don’t see it — at least not yet — as being comparable to more specific methods designed for specific applications. I don’t see multirobot systems being able to handle everything.
+How should I put it… it’s just really about specifying things. Maybe it’s easier in a specific situation to do something manually or to create something much simpler, rather than having to use a much more powerful tool that requires more work, and so on.
+But for me, that’s my point. At least, that’s what I see so far",,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+Reusability and modularization,,,,,,,,,,,,,,,,,,,
+Source,Topics,Excerpts,,,,,,,,,,,,,,,,,
+Interview 10,Reusability of models across different missions.,"As a pro, as a broad perspective, I can see that.
+It looks modular because you can compose different missions just by defining the goals. You have elements that you can rearrange to create different missions. On the positive side, I see modularity and the ability to reuse a lot of model components across different missions.
+
+On the negative side, I’m not sure if this is a bias I have, but I think the specification of the mission might be quite rigid, especially when it comes to assigning robots to tasks. It’s not something you can easily specify beforehand in the database along with the deliveries.",,,,,,,,,,,,,,,,,
+Interview 10,Modularity and component reuse.,,,,,,,,,,,,,,,,,,
+Interview 5,Limitation of the Bottom-Up Approach in Complex Scenarios.,"Yes, personally, I like this approach because it’s much easier to think at a high level than from the bottom up. It depends, though. It depends on how complex the task is. For example, if the task is very simple — yeah, it's fine. You can start by building a robot for that specific task, assembling the parts, and when you need a controller or something like that, it’ll perform a very specific task, or one that isn’t very complex. A small state machine will solve it.
+So, complexity isn’t much of a problem, and it’s okay to build something from scratch. But when the applications become much more complex — like resource allocation, where different robots are doing different tasks, interacting with each other or the environment — it becomes much harder to have a single method to handle it all.
+For example, if I need to perform a task with five robots — let’s say five robots are opening a door, grabbing something here and there, and working together on the same task. I could do it manually, sure, but if I need a method to handle different tasks, doing it by hand becomes really complicated. It takes a lot of time, and there’s a lot of decomposition involved.
+So, personally, I would say I like this approach because it provides a method. It gives flexibility, so I’m not just doing everything manually. Even if I do it manually, at least I have a method for how to handle different cases, without reinventing the wheel every time. It’s like doing addition — I don’t need to grab pebbles and count them one by one to add 5 and 5, right? I have a method for how to do the calculation. I apply it, adjust for different parameters, and it solves the problem. If the task is simpler and straightforward, that would be my answer.",,,,,,,,,,,,,,,,,
+Interview 6,Decomposing high-level actions based on the real world is useful.,"I think what I would call the dynamic aspect — I’m not sure what to call it exactly — is the fact that you have these high-level actions which you then decompose based on the world. Based on factors like the number of objects involved or where they need to be placed. The ability to instantiate the same tasks in different ways, depending on the environment, is very useful for making missions adaptive.
+Typically, when you do something model-driven, the models tend to be static. But with this approach, the models become more adaptable to the environment.",,,,,,,,,,,,,,,,,
+Interview 6,Ability to instantiate the same task in different ways depending on the context.,,,,,,,,,,,,,,,,,,
+Interview 6,The approach makes models more adaptable rather than static.,,,,,,,,,,,,,,,,,,
+Interview 9,"The MutRoSe approach addresses one of the main concerns, which is the description of missions involving multiple agents (humans and robots).","the ability to intuitively consider environmental variability at a high level further enhances the flexibility and expressiveness of the specification language, while also simplifying its use.",,,,,,,,,,,,,,,,,
+Interviewee 7 Questionnaire Response,,"the ability to intuitively consider environmental variability at a high level further enhances the flexibility and expressiveness of the specification language, while also simplifying its use.",,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,Visual Languages tend to not scale well with complexity.,,
+,,,,,,,,,,,,,,,,,Fonte,Keypoints,Excerpts
+,,,,,,,,,,,,,,,,,Interview 2,Linguagens visuais tendem a **não escalar bem** com o aumento da complexidade,
+,,,,,,,,,,,,,,,,,Interview 2,"Em missões **mais complexas**, os diagramas podem se tornar **grandes e confusos**, dificultando a navegação e o entendimento.",
+,,,,,,,,,,,,,,,,,Interview 3,Dificuldade de Distinção Visual,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,Tradeoff between generalization and specialization,,
+,,,,,,,,,,,,,,,,,Fonte,Keypoints,Excerpts
+,,,,,,,,,,,,,,,,,Interview 4,"Dificuldade em incorporar **otimizações técnicas** (ex.: pesquisa operacional, eficiência de processos).",
+,,,,,,,,,,,,,,,,,Interview 5,"O MutRoSe, por ser generalista, pode ser **menos eficiente** em cenários muito específicos comparado a soluções customizadas.",
