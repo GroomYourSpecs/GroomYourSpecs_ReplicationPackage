@@ -9,7 +9,7 @@ This replication package is structured as follows:
 ```
 /
 .
-|--- literature_review: Studies collected from the literature review and a document detailing the search process used.
+|--- literature_review: Studies collected from the literature review and a document detailing the operators to search the studies.
 |--- interview: Data extracted from the interview and a document detailing the interview process.
 |--- controlled_experiment: Data, analysis and the protocol for the controlled experiment
     |--- questionnaire: Contains 3 csv files with questionnaire responses for bottom-up, top-down and both combined.
