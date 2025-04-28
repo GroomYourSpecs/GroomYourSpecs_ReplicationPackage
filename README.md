@@ -14,5 +14,5 @@ This replication package is structured as follows:
 |--- controlled_experiment: Data, analysis and the protocol for the controlled experiment
     |--- questionnaire: Contains 3 csv files with questionnaire responses for bottom-up, top-down and both combined.
     |--- artefacts: Contains the zip file with the produced artefacts and 3 csv files describing the results for the top-down and bottom-up.
-    |--- instructions: Contains the instructions, tutorials and information given to students during the experiment.
+    |--- instructions: Contains the tutorials, schedules and information given to students during the experiment.
 ```
