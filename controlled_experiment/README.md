@@ -33,6 +33,6 @@ jupyter notebook
    |---top_down.csv: Questionnaire responses for the top-down strategy
    |---questionnaire.csv: Questionnaire responses for both strategies combined
    |---quest_analysis.ipynb: Jupyter notebook with the data analysis
-   |---questions_controlled_exp_quest.pdf: The questions presented to participants
+   |---questions_controlled_exp_quest.pdf: The questions presented to experiment participants
    |---likert_plot_quest.ipynb: R code used to generate the Likert graphs
 ```
