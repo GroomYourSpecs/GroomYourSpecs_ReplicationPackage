@@ -13,7 +13,12 @@ jupyter notebook
 ## Overview
 ```
 .
-|---instructions_controlled_experiment.zip: Instructions, tutorials and information given to students during the experiment.
+|---instructions
+   |---bt_tutorial.pdf:
+   |---goal_model_tutorial.pdf:
+   |---
+   |---
+   |---
 |---artefacts
    |---artefacts.zip: Artefacts produced during the controlled experiment
    |---artefacts_analysis.ipynb: Jupyter notebook with the data analysis
