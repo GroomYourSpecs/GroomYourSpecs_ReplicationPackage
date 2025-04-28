@@ -19,8 +19,8 @@ jupyter notebook
    |---bt_deliver_goods.csv: Measured target qualities for the deliver goods mission
    |---bt_food_logistics.csv: Measured target qualities for the food logistics mission
    |---goal_model.csv: Measured target qualities for the top-down strategy for both missions
-   |---top_down_grountruth.zip:
-   |---bottom_up_groundtruth.zip:
+   |---top_down_grountruth.zip: Predefined ground truth used to evaluate artifacts produced through the top-down strategy
+   |---bottom_up_groundtruth.zip:Predefined ground truth used to evaluate artifacts produced through the bottom-up strategy
 |---instructions
    |---bt_tutorial.pdf: Groot tutorial provided to experiment participants 
    |---goal_model_tutorial.pdf: MutRose tutorial provided to experiment participants
